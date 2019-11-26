@@ -12,7 +12,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { GameService } from './providers/game/game.service';
 import { HttpService } from './providers/http/http.service';
 import { PeopleService } from './providers/people/people.service';
-import { ThemeService } from './providers/theme/theme.service';
 
 // ROUTES IMPORT
 import { APP_ROUTES } from './app.routes';
@@ -21,14 +20,12 @@ import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { PeoplePickerComponent } from './components/people-picker/people-picker.component';
 import { StartComponent } from './components/start/start.component';
-import { ThemePickerComponent } from './components/theme-picker/theme-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeoplePickerComponent,
-    StartComponent,
-    ThemePickerComponent
+    StartComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +40,7 @@ import { ThemePickerComponent } from './components/theme-picker/theme-picker.com
   providers: [
     GameService,
     HttpService,
-    PeopleService,
-    ThemeService
+    PeopleService
   ],
   bootstrap: [AppComponent]
 })

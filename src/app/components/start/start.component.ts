@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { GameService } from '../../providers/game/game.service';
 import { PeopleService } from '../../providers/people/people.service';
-import { ThemeService } from '../../providers/theme/theme.service';
 
 import { People } from '../../models/people';
 
@@ -23,15 +22,12 @@ export class StartComponent {
   constructor(
     private gameService: GameService,
     private peopleService: PeopleService,
-    private themeService: ThemeService,
     private router: Router
   ) {
     this.peopleService.reset();
-    this.themeService.reset();
     this.gameService.reset();
 
     this.peopleService.loadPeopleList();
-    this.themeService.loadThemeList();
   }
 
   public async play(): Promise<void> {
